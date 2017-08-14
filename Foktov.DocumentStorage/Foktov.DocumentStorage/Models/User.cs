@@ -15,11 +15,13 @@ namespace Foktov.DocumentStorage.Models
 
     public class UserLogin
     {
-        [Required]
-        [Display(Name = "Ваш логин")]
+        [Required] //Поле обязательно к заполнению;
+        [Display(Name = "Your Login")]
         public string Login { get; set; }
-        [Required]
-        [Display(Name = "Ваш пароль")]
+
+        [Required] //Поле обязательно к заполнению;
+        [DataType(DataType.Password)]
+        [Display(Name = "Your Password")]
         public string Password { get; set; }
     }
 }
